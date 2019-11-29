@@ -1,139 +1,82 @@
-<!doctype html>
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0">
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="欧阳德才">
-<meta property="og:url" content="blog.ouyangdecai.com/index.html">
-<meta property="og:site_name" content="欧阳德才">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="欧阳德才">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: 'undefined',
-      author: '博主'
-    },
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
   };
 </script>
 
+  <meta property="og:type" content="website">
+<meta property="og:title" content="欧阳德才">
+<meta property="og:url" content="blog.ouyangdecai.com/index.html">
+<meta property="og:site_name" content="欧阳德才">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="欧阳德才">
+
+<link rel="canonical" href="blog.ouyangdecai.com/">
 
 
-  <link rel="canonical" href="blog.ouyangdecai.com/">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
 
-
-
-
-
-  <title> 欧阳德才 </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
+  <title>欧阳德才</title>
   
 
 
-
-  <script type="text/javascript">
+  <script>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -146,2106 +89,1191 @@
 
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
+</head>
 
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
 
-  <div class="custom-logo-site-title">
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">欧阳德才</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">欧阳德才</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">day day no bug</p>
   </div>
-    
-      <p class="site-subtitle">day day no bug</p>
-    
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
 </div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
 
 <nav class="site-nav">
   
-
-  
-    <ul id="menu" class="menu">
-      
-        
+  <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
-        
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
         <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
-        
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
-      
-        
+
+    <a href="/archives" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
-      
 
-      
-    </ul>
-  
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
 
-  
+  </li>
+  </ul>
+
 </nav>
-
-
-
- </div>
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content">
             
-  <section id="posts" class="posts-expand">
-    
-      
 
-  
-
+  <div class="posts-expand">
+        
   
   
-  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2019/10/27/《解忧杂货店》读后感/">
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2019/10/27/《解忧杂货店》读后感/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Tomee">
-    <meta itemprop="description" content>
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="欧阳德才">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="欧阳德才" src>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tomee">
+      <meta itemprop="description" content="">
     </span>
-  </span>
 
-    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欧阳德才">
+    </span>
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2019/10/27/《解忧杂货店》读后感/" itemprop="url">
-                  《解忧杂货店》读后感
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/27/《解忧杂货店》读后感/" class="post-title-link" itemprop="url">《解忧杂货店》读后感</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-27T10:37:08+08:00">
-                2019-10-27
-              </time>
-            
+              <span class="post-meta-item-text">发表于</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              <time title="创建时间：2019-10-27 10:37:08" itemprop="dateCreated datePublished" datetime="2019-10-27T10:37:08+08:00">2019-10-27</time>
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/书评/" itemprop="url" rel="index">
                     <span itemprop="name">书评</span>
                   </a>
                 </span>
-
-                
-                
-              
             </span>
-          
 
           
-            
-          
-
-          
-
-          
-          
-             <span id="/2019/10/27/《解忧杂货店》读后感/" class="leancloud_visitors" data-flag-title="《解忧杂货店》读后感">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2019/10/27/《解忧杂货店》读后感/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/10/27/《解忧杂货店》读后感/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
+
     
-
-
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-          &emsp;&emsp;第一次读东野圭吾的作品，以前只是有所耳闻，其作品以悬疑推理著称。就《解忧杂货店》而言，个人觉得不属于悬疑推理类作品，略带悬疑色彩，是为了在每个故事情节中埋下伏笔，引领读者读下去。不得不说这种手法很高明，让读者欲罢不能。先来梳理一下每个故事的主线吧。
-一、回答在牛奶箱里&ems
-          ...
+          <p>&emsp;&emsp;第一次读东野圭吾的作品，以前只是有所耳闻，其作品以悬疑推理著称。就《解忧杂货店》而言，个人觉得不属于悬疑推理类作品，略带悬疑色彩，是为了在每个故事情节中埋下伏笔，引领读者读下去。不得不说这种手法很高明，让读者欲罢不能。先来梳理一下每个故事的主线吧。</p><h3 id="一、回答在牛奶箱里"><a href="#一、回答在牛奶箱里" class="headerlink" title="一、回答在牛奶箱里"></a>一、回答在牛奶箱里</h3><p>&emsp;&emsp;三个“小偷”翔太、敦也、幸平，因为偷来的汽车坏了，误入浪矢杂货店。其实说误入不对，因为敦也知道这个藏身地方，是因为他前几天跟踪的人到过这个杂货店，而这个人正是他们刚刚偷的这家女主人，故事结尾会揭晓真想。当他们找吃的的时候，突然从卷帘门掉一封信到瓦楞纸箱里，由此开启了他们三个与来自三十三年前的“月兔”的通信，“月兔”是一个运动员，但她的爱人罹患癌症，将不久于人世。她到底是应该放弃准备奥运会的训练陪伴爱人最后的时光，还是应该按照爱人的嘱咐坚持训练？她苦于在二者之中做出选择，因为她能参加奥运会是她爱人最大的心愿。翔太他们三人一直疑惑这到底是怎么回事，不过对于来信，他们第一次体会到被人需要的成就感。他们当然不能说出他们所知道的真相，只是建议她放弃比赛，全身心陪伴爱人。但最后事情的真相是，“月兔”自己的训练遇到了瓶颈，而此时她的爱人患了癌症，她正好有机会逃避训练，她的爱人早已看出她的心思，所以才要求她继续训练，不要她陪伴。本来翔太三人是出于他们知道她参加不了莫斯科奥运会而坚定地要她放弃训练去陪伴爱人，而被“月兔”阴差阳错地认为是浪矢先生对她是否真心向往奥运会的考验，由此让她做出了人生中正确的选择。故事的最后，三人又收到一个茶色的信封……</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/27/《解忧杂货店》读后感/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2019/10/27/《解忧杂货店》读后感/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
+    
+    
+    
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2019/08/18/The-Moon-and-Sixpence/">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2019/08/18/The-Moon-and-Sixpence/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Tomee">
-    <meta itemprop="description" content>
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="欧阳德才">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="欧阳德才" src>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tomee">
+      <meta itemprop="description" content="">
     </span>
-  </span>
 
-    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欧阳德才">
+    </span>
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2019/08/18/The-Moon-and-Sixpence/" itemprop="url">
-                  关于《月亮和六便士》的思考
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/18/The-Moon-and-Sixpence/" class="post-title-link" itemprop="url">关于《月亮和六便士》的思考</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-18T21:03:21+08:00">
-                2019-08-18
-              </time>
-            
+              <span class="post-meta-item-text">发表于</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              <time title="创建时间：2019-08-18 21:03:21" itemprop="dateCreated datePublished" datetime="2019-08-18T21:03:21+08:00">2019-08-18</time>
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/书评/" itemprop="url" rel="index">
                     <span itemprop="name">书评</span>
                   </a>
                 </span>
-
-                
-                
-              
             </span>
-          
 
           
-            
-          
-
-          
-
-          
-          
-             <span id="/2019/08/18/The-Moon-and-Sixpence/" class="leancloud_visitors" data-flag-title="关于《月亮和六便士》的思考">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2019/08/18/The-Moon-and-Sixpence/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/08/18/The-Moon-and-Sixpence/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
+
     
-
-
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-          &emsp;&emsp;查尔斯•斯特里克兰，一个生活在英格兰的中产阶级家庭，他是两个孩子的父亲和一个貌美且高雅的女人的丈夫，他是一名股交所经纪人，社会地位虽谈不上顶层上流但也还算富庶。
-&emsp;&emsp;某一天，他突然离开了这个家，无声无息，毫无征兆！他抛充妻子，放弃在别人眼里看来极其幸福的生
-          ...
+          <p>&emsp;&emsp;查尔斯•斯特里克兰，一个生活在英格兰的中产阶级家庭，他是两个孩子的父亲和一个貌美且高雅的女人的丈夫，他是一名股交所经纪人，社会地位虽谈不上顶层上流但也还算富庶。</p><p>&emsp;&emsp;某一天，他突然离开了这个家，无声无息，毫无征兆！他抛充妻子，放弃在别人眼里看来极其幸福的生活，只身一人来到巴黎，追寻他所谓的梦想。在“我”见到他之前，他的妻子艾美和姐夫安德鲁上校一度猜测他带着某个女人私奔去享受奢靡浮华的生活去了，后来“我”见到他的时候，他过着食不果腹，靠人接济的生活，在“我”到巴黎之前，斯特里克兰太太拜托我一定要带他回去，她可以原谅他的一切过错，只要他回去。但“我”最终没能说动一个把关的思想者。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/08/18/The-Moon-and-Sixpence/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2019/08/18/The-Moon-and-Sixpence/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
+    
+    
+    
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2018/09/22/es5方式实现promise/">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2018/09/22/es5方式实现promise/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Tomee">
-    <meta itemprop="description" content>
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="欧阳德才">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="欧阳德才" src>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tomee">
+      <meta itemprop="description" content="">
     </span>
-  </span>
 
-    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欧阳德才">
+    </span>
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/09/22/es5方式实现promise/" itemprop="url">
-                  es5方式实现promise
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/09/22/es5方式实现promise/" class="post-title-link" itemprop="url">es5方式实现promise</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-22T17:32:20+08:00">
-                2018-09-22
-              </time>
-            
+              <span class="post-meta-item-text">发表于</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              <time title="创建时间：2018-09-22 17:32:20" itemprop="dateCreated datePublished" datetime="2018-09-22T17:32:20+08:00">2018-09-22</time>
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/技术/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
-
-                
-                
-              
             </span>
-          
 
           
-            
-          
-
-          
-
-          
-          
-             <span id="/2018/09/22/es5方式实现promise/" class="leancloud_visitors" data-flag-title="es5方式实现promise">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2018/09/22/es5方式实现promise/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2018/09/22/es5方式实现promise/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
+
     
-
-
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-          &emsp;&emsp;关于如何使用es5来实现es6中promise功能，重点在于创建promise的时候，它的回调函数是立即执行的，而其内部的resolve和reject方法又是通过then方法传进来的。那么，如何保证运行到调用成功或失败的操作时，其对应的回调函数是已经定义好了的呢？
-&emsp
-          ...
+          <p>&emsp;&emsp;关于如何使用es5来实现es6中<code>promise</code>功能，重点在于创建<code>promise</code>的时候，它的回调函数是立即执行的，而其内部的<code>resolve</code>和<code>reject</code>方法又是通过<code>then</code>方法传进来的。那么，如何保证运行到调用成功或失败的操作时，其对应的回调函数是已经定义好了的呢？</p><p>&emsp;&emsp;创建promise对象时传进去的回调函数是立即执行的。为了保证在执行到成功或者失败的时候，其对应的回调函数已经定义了，我们可以借助<code>javascript</code>消息队列的特性来达到我们的目的。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/22/es5方式实现promise/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/09/22/es5方式实现promise/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
+    
+    
+    
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2018/08/15/前后端跨域解决方案/">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2018/08/15/前后端跨域解决方案/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Tomee">
-    <meta itemprop="description" content>
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="欧阳德才">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="欧阳德才" src>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tomee">
+      <meta itemprop="description" content="">
     </span>
-  </span>
 
-    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欧阳德才">
+    </span>
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/08/15/前后端跨域解决方案/" itemprop="url">
-                  前后端跨域解决方案
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/08/15/前后端跨域解决方案/" class="post-title-link" itemprop="url">前后端跨域解决方案</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-15T21:28:56+08:00">
-                2018-08-15
-              </time>
-            
+              <span class="post-meta-item-text">发表于</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              <time title="创建时间：2018-08-15 21:28:56" itemprop="dateCreated datePublished" datetime="2018-08-15T21:28:56+08:00">2018-08-15</time>
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/技术/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
-
-                
-                
-              
             </span>
-          
 
           
-            
-          
-
-          
-
-          
-          
-             <span id="/2018/08/15/前后端跨域解决方案/" class="leancloud_visitors" data-flag-title="前后端跨域解决方案">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2018/08/15/前后端跨域解决方案/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2018/08/15/前后端跨域解决方案/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
+
     
-
-
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-          1、问题描述为了避免前后端在联调的时候，遇到问题时前端都要在本机上修改然后再打包到服务器上调试。经过实践，现给出CORS（跨域资源共享）解决方案：
-2、解决方案
-1.仅仅是跨域请求  
-
-
-前端设置
-
-前端如果是用的es6框架，则需要在mock中补充如下配置：
-123config: &#123;	c
-          ...
+          <h4 id="1、问题描述"><a href="#1、问题描述" class="headerlink" title="1、问题描述"></a>1、问题描述</h4><p>为了避免前后端在联调的时候，遇到问题时前端都要在本机上修改然后再打包到服务器上调试。经过实践，现给出CORS（跨域资源共享）解决方案：</p><h4 id="2、解决方案"><a href="#2、解决方案" class="headerlink" title="2、解决方案"></a>2、解决方案</h4><blockquote>
+<p>1.仅仅是跨域请求  </p>
+</blockquote><ul>
+<li>前端设置</li>
+</ul><p>前端如果是用的es6框架，则需要在mock中补充如下配置：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">config: &#123;</span><br><span class="line">	crossDomain: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/15/前后端跨域解决方案/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/08/15/前后端跨域解决方案/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
+    
+    
+    
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2018/04/15/React-Context-API解读/">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2018/04/15/React-Context-API解读/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Tomee">
-    <meta itemprop="description" content>
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="欧阳德才">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="欧阳德才" src>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tomee">
+      <meta itemprop="description" content="">
     </span>
-  </span>
 
-    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欧阳德才">
+    </span>
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/04/15/React-Context-API解读/" itemprop="url">
-                  React Context API解读
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/04/15/React-Context-API解读/" class="post-title-link" itemprop="url">React Context API解读</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-15T10:45:26+08:00">
-                2018-04-15
-              </time>
-            
+              <span class="post-meta-item-text">发表于</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              <time title="创建时间：2018-04-15 10:45:26" itemprop="dateCreated datePublished" datetime="2018-04-15T10:45:26+08:00">2018-04-15</time>
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/技术/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
-
-                
-                
-              
             </span>
-          
 
           
-            
-          
-
-          
-
-          
-          
-             <span id="/2018/04/15/React-Context-API解读/" class="leancloud_visitors" data-flag-title="React Context API解读">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2018/04/15/React-Context-API解读/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2018/04/15/React-Context-API解读/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
+
     
-
-
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-          一、为什么需要context api–在react开发过程中，我们可能会遇到这样的需求：某组件需要将值传给它的孙子，甚至嵌套更深的后代组件，如果不考虑context api，我们的实现方式，便是采用props逐层向下传递，直到需要获取到值的组件为止：
-123456789101112131415161
-          ...
+          <h3 id="一、为什么需要context-api"><a href="#一、为什么需要context-api" class="headerlink" title="一、为什么需要context api"></a>一、为什么需要context api</h3><p>–<br>在react开发过程中，我们可能会遇到这样的需求：某组件需要将值传给它的孙子，甚至嵌套更深的后代组件，如果不考虑context api，我们的实现方式，便是采用props逐层向下传递，直到需要获取到值的组件为止：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 顶层组件 grandParent.js</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">GrandParent</span> <span class="keyword">extends</span> <span class="title">Component</span></span>&#123;</span><br><span class="line">	render()&#123;</span><br><span class="line">	  <span class="keyword">return</span> &lt;Parent text='我是一个跨组件变量传递示例'/&gt;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 中间层组件 parent.js</span><br><span class="line">class Parent extends Component&#123;</span><br><span class="line">	constructor(props)&#123;</span><br><span class="line">		super(props)</span><br><span class="line">	&#125;</span><br><span class="line">	render()&#123;</span><br><span class="line">		return &lt;Child text=&#123;this.props.text&#125;/&gt;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 需要获取顶层组件的text值的底层组件 child.js</span><br><span class="line">class Child extends Component&#123;</span><br><span class="line">	constructor(props)&#123;</span><br><span class="line">		super(props)</span><br><span class="line">	&#125;</span><br><span class="line">	render()&#123;</span><br><span class="line">		return this.props.text</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/15/React-Context-API解读/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2018/04/15/React-Context-API解读/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
+    
+    
+    
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2017/11/04/selections/">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2017/11/04/selections/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Tomee">
-    <meta itemprop="description" content>
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="欧阳德才">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="欧阳德才" src>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tomee">
+      <meta itemprop="description" content="">
     </span>
-  </span>
 
-    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欧阳德才">
+    </span>
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/11/04/selections/" itemprop="url">
-                  selections工作原理
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/11/04/selections/" class="post-title-link" itemprop="url">selections工作原理</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-04T21:23:10+08:00">
-                2017-11-04
-              </time>
-            
+              <span class="post-meta-item-text">发表于</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              <time title="创建时间：2017-11-04 21:23:10" itemprop="dateCreated datePublished" datetime="2017-11-04T21:23:10+08:00">2017-11-04</time>
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/技术/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
-
-                
-                
-              
             </span>
-          
 
           
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/11/04/selections/" class="leancloud_visitors" data-flag-title="selections工作原理">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2017/11/04/selections/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/11/04/selections/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
+
     
-
-
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-          原文链接：https://bost.ocks.org/mike/selection/
-以前，我对D3的选择集有过一些简单的描述，其中的讲解仅限于入门。 这篇文章以更加全面的方式讲解如何使用选择集，我会说明选择集是如何执行的。这篇文章有点长，但它将消除你的诸多疑虑并助你掌握数据驱动文档（Data-Dr
-          ...
+          <p>原文链接：<a href="https://bost.ocks.org/mike/selection/" target="_blank" rel="noopener">https://bost.ocks.org/mike/selection/</a></p><p>以前，我对D3的选择集有过一些简单的描述，其中的讲解仅限于入门。 这篇文章以更加全面的方式讲解如何使用选择集，我会说明选择集是如何执行的。这篇文章有点长，但它将消除你的诸多疑虑并助你掌握数据驱动文档（Data-Drive Documents）。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/04/selections/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2017/11/04/selections/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
+    
+    
+    
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2017/03/22/js-node-operation/">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2017/03/22/js-node-operation/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Tomee">
-    <meta itemprop="description" content>
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="欧阳德才">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="欧阳德才" src>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tomee">
+      <meta itemprop="description" content="">
     </span>
-  </span>
 
-    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欧阳德才">
+    </span>
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/22/js-node-operation/" itemprop="url">
-                  js关于节点操作的问题
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/03/22/js-node-operation/" class="post-title-link" itemprop="url">js关于节点操作的问题</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-22T08:43:01+08:00">
-                2017-03-22
-              </time>
-            
+              <span class="post-meta-item-text">发表于</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              <time title="创建时间：2017-03-22 08:43:01" itemprop="dateCreated datePublished" datetime="2017-03-22T08:43:01+08:00">2017-03-22</time>
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/技术/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
-
-                
-                
-              
             </span>
-          
 
           
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/03/22/js-node-operation/" class="leancloud_visitors" data-flag-title="js关于节点操作的问题">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2017/03/22/js-node-operation/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/03/22/js-node-operation/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
+
     
-
-
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-          刚看到原生js操作节点这部分，于是动手敲了几行代码练习一下节点操作方法的应用。真没想到还遇到了一个棘手的问题，下面进入正题：首先，我在body里边简单写了个无序列表，如下：123456&lt;ul id="list" style="list-style:none;"&gt;   &lt;li&gt;
-          ...
+          <p>刚看到原生js操作节点这部分，于是动手敲了几行代码练习一下节点操作方法的应用。真没想到还遇到了一个棘手的问题，下面进入正题：<br>首先，我在body里边简单写了个无序列表，如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"list"</span> <span class="attr">style</span>=<span class="string">"list-style:none;"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">li</span>&gt;</span>C<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">li</span>&gt;</span>C++<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">li</span>&gt;</span>JAVA<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">li</span>&gt;</span>JavaScript<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/22/js-node-operation/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2017/03/22/js-node-operation/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
+    
+    
+    
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2017/03/18/build-react-babel-webpack-environment/">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2017/03/18/build-react-babel-webpack-environment/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Tomee">
-    <meta itemprop="description" content>
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="欧阳德才">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="欧阳德才" src>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tomee">
+      <meta itemprop="description" content="">
     </span>
-  </span>
 
-    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欧阳德才">
+    </span>
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/18/build-react-babel-webpack-environment/" itemprop="url">
-                  手动创建react+babel+webpack开发环境
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/03/18/build-react-babel-webpack-environment/" class="post-title-link" itemprop="url">手动创建react+babel+webpack开发环境</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-18T12:46:22+08:00">
-                2017-03-18
-              </time>
-            
+              <span class="post-meta-item-text">发表于</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              <time title="创建时间：2017-03-18 12:46:22" itemprop="dateCreated datePublished" datetime="2017-03-18T12:46:22+08:00">2017-03-18</time>
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/环境搭建/" itemprop="url" rel="index">
                     <span itemprop="name">环境搭建</span>
                   </a>
                 </span>
-
-                
-                
-              
             </span>
-          
 
           
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/03/18/build-react-babel-webpack-environment/" class="leancloud_visitors" data-flag-title="手动创建react+babel+webpack开发环境">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2017/03/18/build-react-babel-webpack-environment/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/03/18/build-react-babel-webpack-environment/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
+
     
-
-
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-          &emsp;&emsp;从年前到现在一直在找工作，也由于家里的一些事情耽搁。所以，搁置已久的日志，是时候重新拾起记录了。由于之前在项目中尽量用的脚手架，甚至有些小项目根本就没有搭建什么框架。于是，今天琢磨了一下全手动搭建react+webpack+babel开发环境。一方面填坑，另一方面借此机会熟悉
-          ...
+          <p>&emsp;&emsp;从年前到现在一直在找工作，也由于家里的一些事情耽搁。所以，搁置已久的日志，是时候重新拾起记录了。由于之前在项目中尽量用的脚手架，甚至有些小项目根本就没有搭建什么框架。于是，今天琢磨了一下全手动搭建react+webpack+babel开发环境。一方面填坑，另一方面借此机会熟悉一下这些工具的API。以下正文：</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/18/build-react-babel-webpack-environment/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2017/03/18/build-react-babel-webpack-environment/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
+    
+    
+    
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2017/01/18/ScopeChain/">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2017/01/18/ScopeChain/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Tomee">
-    <meta itemprop="description" content>
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="欧阳德才">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="欧阳德才" src>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tomee">
+      <meta itemprop="description" content="">
     </span>
-  </span>
 
-    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欧阳德才">
+    </span>
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/18/ScopeChain/" itemprop="url">
-                  关于作用域和作用域链
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/01/18/ScopeChain/" class="post-title-link" itemprop="url">关于作用域和作用域链</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-18T16:38:10+08:00">
-                2017-01-18
-              </time>
-            
+              <span class="post-meta-item-text">发表于</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              <time title="创建时间：2017-01-18 16:38:10" itemprop="dateCreated datePublished" datetime="2017-01-18T16:38:10+08:00">2017-01-18</time>
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/技术/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
-
-                
-                
-              
             </span>
-          
 
           
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/01/18/ScopeChain/" class="leancloud_visitors" data-flag-title="关于作用域和作用域链">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2017/01/18/ScopeChain/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/01/18/ScopeChain/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
+
     
-
-
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-          &emsp;&emsp;本来是计划写一下JS闭包的概念的。但发现要准确理解闭包的之前，必须要先弄明白几个重要的概念：
-一、执行环境
-&emsp;&emsp;执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每一个执行环境都有一个与之关联的变量对象，用于保存执行环境中定义的变量和函数。
-          ...
+          <p>&emsp;&emsp;本来是计划写一下JS闭包的概念的。但发现要准确理解闭包的之前，必须要先弄明白几个重要的概念：</p><h2 id="一、执行环境"><a href="#一、执行环境" class="headerlink" title="一、执行环境"></a>一、执行环境</h2><hr><p>&emsp;&emsp;执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每一个执行环境都有一个与之关联的变量对象，用于保存执行环境中定义的变量和函数。要注意的是，<font color="red">执行环境和变量对象都是在执行函数的时候创建，而并非是在定义函数的时候创建的</font>。<br>&emsp;&emsp;当执行流进入到函数时，该函数的执行环境将被推入到一个环境栈中，等到函数执行完毕，其环境将被弹出并销毁，保存在其中的变量和函数也随之销毁，并把控制权交给之前的执行环境。<font color="red">这个环境栈其实就是作用域链</font>。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/01/18/ScopeChain/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2017/01/18/ScopeChain/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
+    
+    
+    
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2017/01/17/Inherit/">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2017/01/17/Inherit/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Tomee">
-    <meta itemprop="description" content>
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="欧阳德才">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="欧阳德才" src>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tomee">
+      <meta itemprop="description" content="">
     </span>
-  </span>
 
-    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欧阳德才">
+    </span>
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/01/17/Inherit/" itemprop="url">
-                  JavaScript继承
-                </a>
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/01/17/Inherit/" class="post-title-link" itemprop="url">JavaScript继承</a>
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-17T15:59:50+08:00">
-                2017-01-17
-              </time>
-            
+              <span class="post-meta-item-text">发表于</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+              <time title="创建时间：2017-01-17 15:59:50" itemprop="dateCreated datePublished" datetime="2017-01-17T15:59:50+08:00">2017-01-17</time>
+            </span>
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/技术/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
-
-                
-                
-              
             </span>
-          
 
           
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/01/17/Inherit/" class="leancloud_visitors" data-flag-title="JavaScript继承">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2017/01/17/Inherit/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/01/17/Inherit/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
+
     
-
-
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-          &emsp;&emsp;前面总结了JS对象的创建，既然有对象的创建，自然就离不开继承，本篇将总结一下JS几种实现继承的方法：
-一、原型链继承
-&emsp;&emsp;我们知道每个对象都有一个指定的原型对象，这个原型对象是可以被所有对象的实例访问到的，因此可以采用将子类的原型指针指向要继承的父类的实例
-          ...
+          <p>&emsp;&emsp;前面总结了JS对象的创建，既然有对象的创建，自然就离不开继承，本篇将总结一下JS几种实现继承的方法：</p><h2 id="一、原型链继承"><a href="#一、原型链继承" class="headerlink" title="一、原型链继承"></a>一、原型链继承</h2><hr><p>&emsp;&emsp;我们知道每个对象都有一个指定的原型对象，这个原型对象是可以被所有对象的实例访问到的，因此可以采用将子类的原型指针指向要继承的父类的实例。代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name=<span class="string">'tom'</span>;</span><br><span class="line">    <span class="keyword">this</span>.age=<span class="number">25</span>;</span><br><span class="line">&#125;</span><br><span class="line">Parent.prototype.sayName=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">'我是'</span>+<span class="keyword">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.sex=<span class="string">'male'</span>;</span><br><span class="line">&#125;</span><br><span class="line">Child.prototype=<span class="keyword">new</span> Parent(); <span class="comment">//继承</span></span><br><span class="line">Child.prototype.constructor=Child;</span><br><span class="line"><span class="keyword">var</span> child=<span class="keyword">new</span> Child();</span><br><span class="line">child.sayName();</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/01/17/Inherit/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <div class="post-button">
+              <a class="btn" href="/2017/01/17/Inherit/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           <!--/noindex-->
         
       
     </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
     
-  </section>
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
-          
+
           </div>
           
 
-
-          
-
         </div>
-        
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Tomee">
-          <p class="site-author-name" itemprop="name">Tomee</p>
-          <p class="site-description motion-element" itemprop="description"></p>
-        </div>
-        <nav class="site-state motion-element">
+  <img class="site-author-image" itemprop="image" alt="Tomee"
+    src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Tomee</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
         
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
           
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">14</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
           
-
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">14</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/tomee-oy" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/2088048923/profile?topnav=1&wvr=6&is_all=1" target="_blank" title="微博">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                  微博
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/ou-yang-de-cai" target="_blank" title="知乎">
-                  
-                    <i class="fa fa-fw fa-angellist"></i>
-                  
-                  知乎
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              友情链接
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://yuguo.us/" title="Yuguo" target="_blank">Yuguo</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://cnedwan.com/" title="Xuheng" target="_blank">Xuheng</a>
-                </li>
-              
-            </ul>
-          </div>
-        
-
-        
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/tomee-oy" title="GitHub &rarr; https://github.com/tomee-oy" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/people/ou-yang-de-cai" title="知乎 &rarr; http://www.zhihu.com/people/ou-yang-de-cai" rel="noopener" target="_blank"><i class="fa fa-fw fa-angellist"></i>知乎</a>
+      </span>
+  </div>
 
 
-      </section>
 
-      
+      </div>
 
     </div>
   </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">
+        
+
+<div class="copyright">
   
   &copy; 
   <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Tomee</span>
 </div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
-
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.5.0
+  </div>
 
         
+
+
+
+
+
+
+
+
+
+
+
 
         
       </div>
     </footer>
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'LS5GR52oJSvHEsAaOMImvnK8-gzGzoHsz',
+    appKey: 'F2PCj4wRtzGQAuCVGeeEBbqV',
+    placeholder: "ヾﾉ≧∀≦)o快来评论一下吧!",
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);
 </script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-
-
-
-  
-  
-
-  
-
-  
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("xUAzEcVj0ETQXIxIKTDo7aHM-gzGzoHsz", "sVrjzN8U2N1AhxFwcjLd8Cs9");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-
-  
-
 
 </body>
 </html>
