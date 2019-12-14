@@ -52,27 +52,27 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="欧阳德才">
-<meta property="og:url" content="blog.ouyangdecai.com/categories/环境搭建/index.html">
+<meta property="og:url" content="blog.ouyangdecai.com/page/4/index.html">
 <meta property="og:site_name" content="欧阳德才">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="欧阳德才">
 
-<link rel="canonical" href="blog.ouyangdecai.com/categories/环境搭建/">
+<link rel="canonical" href="blog.ouyangdecai.com/page/4/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
+    isHome: true,
     isPost: false,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>分类: 环境搭建 | 欧阳德才</title>
+  <title>欧阳德才</title>
   
 
 
@@ -177,49 +177,116 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+        
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">环境搭建
-          <small>分类</small>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2017/01/05/FirstVueProj/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tomee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欧阳德才">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/01/05/FirstVueProj/" class="post-title-link" itemprop="url">第一个vuejs项目：他山之石</a>
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-01-05 22:28:23" itemprop="dateCreated datePublished" datetime="2017-01-05T22:28:23+08:00">2017-01-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/项目/" itemprop="url" rel="index">
+                    <span itemprop="name">项目</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/项目/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2017/01/05/FirstVueProj/" class="post-meta-item leancloud_visitors" data-flag-title="第一个vuejs项目：他山之石" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2017/01/05/FirstVueProj/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/01/05/FirstVueProj/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2017</h1>
+          <h2 id="路由：vue-router（2-0版本中使用axios，vue-router已停止维护）"><a href="#路由：vue-router（2-0版本中使用axios，vue-router已停止维护）" class="headerlink" title="路由：vue-router（2.0版本中使用axios，vue-router已停止维护）"></a>路由：vue-router（2.0版本中使用axios，vue-router已停止维护）</h2><p>&emsp;&emsp;本项目中，路由配置作为一个单独的模块被放routers.js中，在路由配置中一定要通过import引入所有路由需要的组件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import Vue from <span class="string">'vue'</span></span><br><span class="line">import VueRouter from <span class="string">'vue-router'</span></span><br><span class="line">import MainPage from <span class="string">'./components/Main'</span></span><br><span class="line">import SlideNav from <span class="string">'./components/SlideNav'</span></span><br><span class="line">import TeaProduct from <span class="string">'./components/TeaProduct'</span></span><br><span class="line">Vue.use(VueRouter);</span><br><span class="line">var routes=[</span><br><span class="line">    &#123;path:<span class="string">"/"</span>,component:MainPage&#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:<span class="string">"/index"</span>,</span><br><span class="line">        component:SlideNav,</span><br><span class="line">        children:[&#123;</span><br><span class="line">            path:<span class="string">'product'</span>,</span><br><span class="line">            component:TeaProduct</span><br><span class="line">        &#125;]</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br><span class="line">var router=new VueRouter(&#123;</span><br><span class="line">    routes</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">export</span> default router</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2017/01/05/FirstVueProj/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2017-03-18T12:46:22+08:00"
-              content="2017-03-18">
-          03-18
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2017/03/18/build-react-babel-webpack-environment/" itemprop="url">
-            <span itemprop="name">手动创建react+babel+webpack开发环境</span>
-          </a>
-      </h2>
-
-    </header>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
   </article>
+  
+  
+  
 
-    </div>
   </div>
-  
-  
-  
 
   
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
 
 
 
