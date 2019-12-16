@@ -58,7 +58,7 @@
 <meta property="og:site_name" content="欧阳德才">
 <meta property="og:description" content="js中一些常用的方法，在项目开发中都是想到哪儿写到哪儿，难免有不周全之处，所以有必要归纳总结一下。1、给number类型添加千分位符要实现这个功能有两种方法： 1、如果是整数，可以用内置的Number.prototype.toLocaleString方法，如：11234567.toLocaleString() // 1,234,567">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-16T09:55:13.856Z">
+<meta property="og:updated_time" content="2019-12-16T09:56:19.323Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js常用方法实现">
 <meta name="twitter:description" content="js中一些常用的方法，在项目开发中都是想到哪儿写到哪儿，难免有不周全之处，所以有必要归纳总结一下。1、给number类型添加千分位符要实现这个功能有两种方法： 1、如果是整数，可以用内置的Number.prototype.toLocaleString方法，如：11234567.toLocaleString() // 1,234,567">
@@ -273,6 +273,7 @@
 <p>这种排序相当于每次锁定一个位置，然后用这个位置上的值与其后的所有值进行比较，记录下比锁定位置的值小的那个值的索引，本轮比较结束后将记录下位置的值与锁定位置的值进行交换，那么锁定位置就是最小值了。</p>
 <h5 id="3-3-插入排序"><a href="#3-3-插入排序" class="headerlink" title="3.3 插入排序"></a>3.3 插入排序</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> insertionSort = <span class="function"><span class="params">arr</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> [length] = arr;</span><br><span class="line">  <span class="keyword">let</span> temp;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; length; i++) &#123;</span><br><span class="line">    temp = arr[i]</span><br><span class="line">    <span class="keyword">let</span> j = i - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span>(j &gt;= <span class="number">0</span> &amp;&amp; arr[j] &gt; temp) &#123;</span><br><span class="line">      arr[j + <span class="number">1</span>] = arr[j]</span><br><span class="line">      j--</span><br><span class="line">    &#125;</span><br><span class="line">    arr[j + <span class="number">1</span>] = temp</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>插入排序的思想，就是保证<code>i</code>之前的所有值都是有序的。用<code>i</code>这个位置的值与前面的值从后往前比较，先把<code>i</code>处的值用<code>temp</code>存起来，以防在值移动过程中被覆盖。如果<code>j</code>处的值比<code>i</code>处的值大，那么把<code>j</code>处的值往后移一个位置，移到<code>j+1</code>处，把<code>j</code>这个位置空出来，然后<code>j--</code>进行下一次比较。如果此时<code>i</code>处的值比<code>j</code>处小或者相等了，那么也没必要再往前进行比较了，因为<code>i</code>之前的数都是有序的。那么把<code>i</code>处的值放在空出来的那个位置，即<code>j+1</code>这个位置，即完成插入排序。</p>
+<p>未完待续。。。</p>
 
     </div>
 
