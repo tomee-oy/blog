@@ -182,6 +182,103 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2017/01/16/SessionAndCookie/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tomee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欧阳德才">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/01/16/SessionAndCookie/" class="post-title-link" itemprop="url">Session和Cookie：相爱相杀</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-01-16 15:57:34" itemprop="dateCreated datePublished" datetime="2017-01-16T15:57:34+08:00">2017-01-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2017/01/16/SessionAndCookie/" class="post-meta-item leancloud_visitors" data-flag-title="Session和Cookie：相爱相杀" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2017/01/16/SessionAndCookie/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/01/16/SessionAndCookie/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>&emsp;&emsp;关于session和cookie，以前在大学就开始接触，但从来没有对这两个东西有一个系统的认识。如今想来，是时候对它们进行一下梳理了。</p><h2 id="一、认识cookie"><a href="#一、认识cookie" class="headerlink" title="一、认识cookie"></a>一、认识cookie</h2><p>&emsp;&emsp;cookie是存在于客户端的状态跟踪机制。由于HTTP是无状态协议，当客户端向服务器发送请求，服务器对请求进行响应，随后连接断开，当下一次同一个客户端再次访问服务器的时候，服务器并不知道这个请求就是上一次的发起者，所有的请求数据都要重新构造一遍，服务端的效率相当低下。<br>&emsp;&emsp;所以，cookie就发挥了作用。客户端浏览器每一次向服务器发送请求的时候，都要在http请求头中携带关于cookie的信息随之发送到服务器，服务器获得cookie的信息并根据信息判断此次请求的发送者是不是之前发送过请求的“人”，以此判断做出相应的反应。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> getCookie(Cookies[] cookies,String name)&#123;</span><br><span class="line">    <span class="keyword">if</span>(cookies != null)&#123;</span><br><span class="line">        <span class="keyword">for</span>(Cookie cookie : cookies)&#123;</span><br><span class="line">            <span class="keyword">if</span>(cookie.getName() == name)&#123;</span><br><span class="line">                <span class="built_in">return</span> cookie.getValue();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> null;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Cookies[] cookies=request.getCookies();</span><br><span class="line">String account=getCookie(cookies,<span class="string">"account"</span>) ;</span><br><span class="line">String password=getCookie(cookies,<span class="string">"password"</span>);</span><br><span class="line"><span class="keyword">if</span>(account==null)&#123;</span><br><span class="line">    response.addCookie(new Cookie(<span class="string">"account"</span>,<span class="string">"ouyang"</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(password == null)&#123;</span><br><span class="line">    response.addCookie(new Cookie(<span class="string">"password"</span>,<span class="string">"123456"</span>))</span><br><span class="line">&#125;</span><br><span class="line">response.setHeader(<span class="string">"Set-Cookie"</span>);</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2017/01/16/SessionAndCookie/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="blog.ouyangdecai.com/2017/01/13/CreateJSObject/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -517,7 +614,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -530,7 +627,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
