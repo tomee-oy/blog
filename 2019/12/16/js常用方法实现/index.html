@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="js中一些常用的方法，在项目开发中都是想到哪儿写到哪儿，难免有不周全之处，所以有必要归纳总结一下。1、给number类型添加千分位符要实现这个功能有两种方法： 1、如果是整数，可以用内置的Number.prototype.toLocaleString方法，如：11234567.toLocaleString() &#x2F;&#x2F; 1,234,5672、如果要给小数位也加千分位符，那么toLocaleString">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js常用方法实现">
+<meta property="og:url" content="https://oydc.cc/blog/2019/12/16/js%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0/index.html">
+<meta property="og:site_name" content="欧阳德才">
+<meta property="og:description" content="js中一些常用的方法，在项目开发中都是想到哪儿写到哪儿，难免有不周全之处，所以有必要归纳总结一下。1、给number类型添加千分位符要实现这个功能有两种方法： 1、如果是整数，可以用内置的Number.prototype.toLocaleString方法，如：11234567.toLocaleString() &#x2F;&#x2F; 1,234,5672、如果要给小数位也加千分位符，那么toLocaleString">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-16T01:47:43.000Z">
+<meta property="article:modified_time" content="2022-02-12T09:29:04.549Z">
+<meta property="article:author" content="Tomee">
+<meta property="article:tag" content="js">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://oydc.cc/blog/2019/12/16/js%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>js常用方法实现 | 欧阳德才</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">欧阳德才</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">天行健，君子以自强不息</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://oydc.cc/blog/2019/12/16/js%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Tomee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="欧阳德才">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          js常用方法实现
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-16 09:47:43" itemprop="dateCreated datePublished" datetime="2019-12-16T09:47:43+08:00">2019-12-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/2019/12/16/js%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0/" class="post-meta-item leancloud_visitors" data-flag-title="js常用方法实现" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">评论次数：</span>
+    
+    <a title="valine" href="/2019/12/16/js%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/12/16/js%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>js中一些常用的方法，在项目开发中都是想到哪儿写到哪儿，难免有不周全之处，所以有必要归纳总结一下。</p><h4 id="1、给number类型添加千分位符"><a href="#1、给number类型添加千分位符" class="headerlink" title="1、给number类型添加千分位符"></a>1、给<code>number</code>类型添加千分位符</h4><p>要实现这个功能有两种方法：</p><blockquote>
+<p>1、如果是整数，可以用内置的<code>Number.prototype.toLocaleString</code>方法，如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1234567.</span><span class="title function_">toLocaleString</span>() <span class="comment">// 1,234,567</span></span><br></pre></td></tr></table></figure><br>2、如果要给小数位也加千分位符，那么<code>toLocaleString</code>就爱莫能助了，该是正则表达式上场了，先贴出具体实现吧：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">localeFun</span> = str =&gt; str.<span class="title function_">replace</span>(<span class="regexp">/(\d)(?=(?:\d&#123;3&#125;)+\.\d+$)|(?&lt;=^\d+\.(?:\d&#123;3&#125;)*\d&#123;2&#125;)(\d)|(?&lt;!\d*\.\d*)(\d)(?=(?:\d&#123;3&#125;)+$)/g</span>, <span class="function">(<span class="params">_, p1, p2, p3</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (p1) <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;p1&#125;</span>,`</span></span><br><span class="line">  <span class="keyword">if</span> (p2) <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;p2&#125;</span>,`</span></span><br><span class="line">  <span class="keyword">if</span> (p3) <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;p3&#125;</span>,`</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><br>这个方法不仅实现为小数添加整数部分和小数部分的千分位符，还实现了为纯整数添加千分位符，也就是涵盖了方法一的功能。这串正则表达式看似复杂，待我慢慢拆解。首先，<code>g</code>修饰符不可少，因为整体思路就是要去检测每一个字符所处的位置是否符合加千分位符的条件的，是一个遍历的过程！然后，主体部分分为三个<code>|</code>分别实现为整数位加千分位符、为小数位加千分位符、为纯整数加千分位符。第一部分，匹配一个数字<code>(\d)</code>，加括号是为了捕获它，以便于在<code>replace</code>第二个参数中使用替换，<code>(?=)</code>表示该数字的右边必须紧跟的内容，<code>(?:\d&#123;3&#125;)+</code>表示包含至少一组由三位数字组成的匹配项，而<code>(?:)</code>表示非捕获，如果不加这个规则的话，回调中的<code>p2</code>就会被它占用而不能表示后续的捕获项。<code>\.\d+$</code>表示以小数点后有至少一位的整数字符结尾（如果后面没有数字那么则视为无效的小数，不予以处理）！满足这样规则的则视为匹配小数的整数部分，另外两个规则读者可以试着动手解析一下。</p>
+</blockquote><a id="more"></a>
+
+
+<h4 id="2、获取一个变量的类型"><a href="#2、获取一个变量的类型" class="headerlink" title="2、获取一个变量的类型"></a>2、获取一个变量的类型</h4><p>首先要知道，js的数据类型分为基本数据类型和引用类型，基本数据类型有以下几种：<code>Number、String、Boolean、Null、Undefined、Symbol</code>，引用类型分为<code>Object</code>和<code>Array</code>。说到获取变量的类型，首先想到的就是<code>js</code>原生操作符<code>typeof</code>，遗憾的是，<code>typeof</code>对于<code>null</code>检测出来的结果是<code>object</code>并不是<code>null</code>，对于<code>object</code>和<code>array</code>检测出来的结果都是<code>object</code>，所以，要想准确获得变量类型就只能另辟蹊径了。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">getType</span> = param =&gt; <span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span>.<span class="title function_">call</span>(param).<span class="title function_">match</span>(<span class="regexp">/(?&lt;=^\[object\s)[^]+(?=\]$)/</span>).<span class="title function_">toLowerCase</span>()</span><br></pre></td></tr></table></figure><br>采用<code>object</code>的<code>toString</code>方法，会返回<code>[object xxx]</code>的形式，而<code>xxx</code>恰好就是参数的类型，然后用正则表达式去掉我们不需要的部分，保留类型，把首字母也转成小写即可。这里使用了<code>Object.prototype.toString.call()</code>的形式来得到包含类型的字符串，是因为其他基础类型改写了<code>object</code>的<code>toString</code>方法，比如，<code>number</code>的<code>toString</code>方法返回数字的字符串形式，<code>function</code>的<code>toString</code>返回定义方法的字符串形式，只有顶层的<code>object</code>的<code>toString</code>方法还保留着获取类型的功能。</p>
+<p>未完待续。。。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/js/" rel="tag"># js</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/12/14/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E3%80%8A%E7%99%BD%E5%A4%9C%E8%A1%8C%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" rel="next" title="东野圭吾《白夜行》读后感">
+                  <i class="fa fa-chevron-left"></i> 东野圭吾《白夜行》读后感
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/2019/12/19/js%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%A2%B3%E7%90%86/" rel="prev" title="js排序算法梳理">
+                  js排序算法梳理 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E7%BB%99number%E7%B1%BB%E5%9E%8B%E6%B7%BB%E5%8A%A0%E5%8D%83%E5%88%86%E4%BD%8D%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">1、给number类型添加千分位符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E8%8E%B7%E5%8F%96%E4%B8%80%E4%B8%AA%E5%8F%98%E9%87%8F%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">2、获取一个变量的类型</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="Tomee"
+    src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Tomee</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+        
+          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/tomee-oy" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;tomee-oy" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/people/ou-yang-de-cai" title="知乎 &amp;rarr; http:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;ou-yang-de-cai" rel="noopener" target="_blank"><i class="fa fa-fw fa-angellist"></i>知乎</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Tomee</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'xUAzEcVj0ETQXIxIKTDo7aHM-gzGzoHsz',
+    appKey: 'sVrjzN8U2N1AhxFwcjLd8Cs9',
+    placeholder: "ヾﾉ≧∀≦)o快来评论一下吧!",
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: true,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+</body>
+</html>
