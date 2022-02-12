@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 6.0.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon.ico">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/blog/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
 
 
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '/blog/',
     scheme: 'Pisces',
     version: '7.5.0',
     exturl: false,
@@ -53,7 +53,7 @@
   <meta name="description" content="1、问题描述为了避免前后端在联调的时候，遇到问题时前端都要在本机上修改然后再打包到服务器上调试。经过实践，现给出CORS（跨域资源共享）解决方案：2、解决方案 1.仅仅是跨域请求    前端设置 前端如果是用的es6框架，则需要在mock中补充如下配置：123config: &amp;#123;	crossDomain: true&amp;#125;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前后端跨域解决方案">
-<meta property="og:url" content="https://oydc.cc/blog/2018/08/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:url" content="https://oydc.cc/2018/08/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.html">
 <meta property="og:site_name" content="欧阳德才">
 <meta property="og:description" content="1、问题描述为了避免前后端在联调的时候，遇到问题时前端都要在本机上修改然后再打包到服务器上调试。经过实践，现给出CORS（跨域资源共享）解决方案：2、解决方案 1.仅仅是跨域请求    前端设置 前端如果是用的es6框架，则需要在mock中补充如下配置：123config: &amp;#123;	crossDomain: true&amp;#125;">
 <meta property="og:locale" content="zh_CN">
@@ -63,7 +63,7 @@
 <meta property="article:tag" content="js">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://oydc.cc/blog/2018/08/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+<link rel="canonical" href="https://oydc.cc/2018/08/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
 
 
 <script id="page-configurations">
@@ -119,7 +119,7 @@
   <div class="site-meta">
 
     <div>
-      <a href="/" class="brand" rel="start">
+      <a href="/blog/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">欧阳德才</span>
         <span class="logo-line-after"><i></i></span>
@@ -143,22 +143,22 @@
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+    <a href="/blog/archives" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
 
   </li>
   </ul>
@@ -190,7 +190,7 @@
     <link itemprop="mainEntityOfPage" href="https://oydc.cc/blog/2018/08/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
       <meta itemprop="name" content="Tomee">
       <meta itemprop="description" content="">
     </span>
@@ -218,14 +218,14 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                  <a href="/blog/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2018/08/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="post-meta-item leancloud_visitors" data-flag-title="前后端跨域解决方案" title="阅读次数">
+            <span id="/blog/2018/08/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="post-meta-item leancloud_visitors" data-flag-title="前后端跨域解决方案" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -240,8 +240,8 @@
       </span>
       <span class="post-meta-item-text">评论次数：</span>
     
-    <a title="valine" href="/2018/08/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/08/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" itemprop="commentCount"></span>
+    <a title="valine" href="/blog/2018/08/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/2018/08/15/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -299,14 +299,14 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/js/" rel="tag"># js</a>
+              <a href="/blog/tags/js/" rel="tag"># js</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2018/04/15/React-Context-API%E8%A7%A3%E8%AF%BB/" rel="next" title="React Context API解读">
+                <a href="/blog/2018/04/15/React-Context-API%E8%A7%A3%E8%AF%BB/" rel="next" title="React Context API解读">
                   <i class="fa fa-chevron-left"></i> React Context API解读
                 </a>
             </div>
@@ -314,7 +314,7 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2018/09/22/es5%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0promise/" rel="prev" title="es5方式实现promise">
+                <a href="/blog/2018/09/22/es5%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0promise/" rel="prev" title="es5方式实现promise">
                   es5方式实现promise <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -363,27 +363,27 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="site-author-image" itemprop="image" alt="Tomee"
-    src="/images/avatar.gif">
+    src="/blog/images/avatar.gif">
   <p class="site-author-name" itemprop="name">Tomee</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+          <a href="/blog/archives">
         
           <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
+            <a href="/blog/categories/">
           
         <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
+            <a href="/blog/tags/">
           
         <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">标签</span></a>
@@ -444,19 +444,19 @@
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/js/utils.js"></script>
+<script src="/blog/js/utils.js"></script>
 
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
+<script src="/blog/js/motion.js"></script>
 
 
-<script src="/js/next-boot.js"></script>
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
 
 
 
